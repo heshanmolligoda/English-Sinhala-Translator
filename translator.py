@@ -38,7 +38,7 @@ class GUIClass:
 
         for l in find:
             for line in lines:
-                if re.search(l, line, re.I):
+                 if re.findall('\\b' + l + '\\b', line, re.I):
                     print(line)
                     sin_word = (line.split('-')[1]).strip()
                     sin_sentence = (sin_sentence + " " + sin_word).strip()
